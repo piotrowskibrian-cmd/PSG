@@ -436,3 +436,134 @@ footer a { color: #5a6b7e; }
   .page-hero { padding: 48px 0; }
   .nav-links a:not(.nav-cta) { display: none; }
 }
+
+/* ---------- Why Pio (proof blocks) ---------- */
+.why { background: var(--paper); border-bottom: 1px solid var(--line); }
+.why-intro {
+  font-size: 18px;
+  color: #33465c;
+  max-width: 46em;
+  margin-bottom: 44px;
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.proof-block {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  border-top: 3px solid var(--amber);
+}
+.proof-block h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.proof-block p { font-size: 15.5px; color: #33465c; }
+
+/* ---------- Comparison table ---------- */
+.compare { background: var(--white); border-bottom: 1px solid var(--line); }
+.compare-scroll { overflow-x: auto; }
+table.model-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.model-table th, .model-table td {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 15.5px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.model-table thead th {
+  background: var(--ink);
+  color: var(--white);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.model-table tbody th {
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--paper);
+  width: 24%;
+}
+.model-table td { color: #33465c; }
+.model-table tr:last-child th, .model-table tr:last-child td { border-bottom: none; }
+.compare-note {
+  margin-top: 28px;
+  border-left: 4px solid var(--amber);
+  background: var(--paper);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  max-width: 46em;
+}
+.compare-note p { font-size: 17px; color: #33465c; }
+
+/* ---------- Process flow ---------- */
+.flow { background: var(--paper); border-bottom: 1px solid var(--line); }
+.flow-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  counter-reset: phase;
+}
+.phase {
+  position: relative;
+  padding: 0 28px 0 0;
+}
+.phase + .phase { padding-left: 28px; border-left: 2px dashed var(--line); }
+.phase .when {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.phase h3 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.phase p { font-size: 16px; color: #33465c; }
+.flow-caveat {
+  margin-top: 32px;
+  font-size: 15.5px;
+  color: #5a6b7e;
+  max-width: 44em;
+}
+
+/* ---------- Emphasis in checklists ---------- */
+.checklist strong { color: var(--ink); }
+
+/* ---------- Standalone content section ---------- */
+.plain { background: var(--white); border-bottom: 1px solid var(--line); }
+.plain .section-head p { max-width: 44em; }
+.plain .body-copy {
+  font-size: 17.5px;
+  color: #33465c;
+  max-width: 44em;
+}
+.plain .body-copy + .body-copy { margin-top: 14px; }
+
+@media (max-width: 820px) {
+  .proof-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .flow-track { grid-template-columns: 1fr; }
+  .phase { padding: 0 0 24px 0; }
+  .phase + .phase { padding-left: 0; padding-top: 24px; border-left: none; border-top: 2px dashed var(--line); }
+}
+@media (max-width: 480px) {
+  .proof-grid { grid-template-columns: 1fr; }
+}
