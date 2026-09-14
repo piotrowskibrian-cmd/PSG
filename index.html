@@ -51,6 +51,9 @@
       </svg>
       <span class="brand-name">Pio <span>Services Group</span></span>
     </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="document.querySelector('header .nav').classList.toggle('menu-open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='false' ? 'true' : 'false');">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
     <nav class="nav-links" aria-label="Main">
       <a href="fractional-recruiting.html">Fractional recruiting</a>
       <a href="embedded-recruiting.html">Embedded recruiting</a>
@@ -207,7 +210,6 @@
       <h2>Let's find your missing piece.</h2>
       <p>Tell us what you're trying to hire for — one email is all it takes to get started.</p>
       <div class="contact-box">
-        <div class="addr">brian@pioservicesgroup.com</div>
         <a class="btn" href="mailto:brian@pioservicesgroup.com?subject=Recruiting%20inquiry">Start a conversation</a>
       </div>
     </div>
